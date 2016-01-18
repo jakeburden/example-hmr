@@ -1,0 +1,42 @@
+{
+  "name": "example-hmr",
+  "version": "1.0.0",
+  "description": "an example of using browserify-hmr with virtual-dom",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "watch": "watchify index.js -o bundle.js -dv",
+    "start": "ecstatic -p 9090 .",
+    "dev": "npm run watch & npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "browserify-hmr",
+    "virtual-dom"
+  ],
+  "author": "Jacob Burden",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify-hmr": "^0.3.1",
+    "ecstatic": "^1.4.0",
+    "ud": "^3.0.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "main-loop": "^3.2.0",
+    "virtual-dom": "^2.1.1",
+    "webworkify": "^1.1.0"
+  }
+}
